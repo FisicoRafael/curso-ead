@@ -17,7 +17,8 @@ class ModuloFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => fake()->unique()->name(),
+
         ];
     }
 }

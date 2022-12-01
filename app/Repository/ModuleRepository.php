@@ -9,12 +9,12 @@ class ModuloRepository
 {
     protected $entity;
 
-    public function __construct(Modulo $course)
+    public function __construct(Modulo $modulo)
     {
-        $this->entity = $course;
+        $this->entity = $modulo;
     }
 
-    public function getModulesCoursesBy($courseId)
+    public function getModulesCoursesBy(string $courseId)
     {
 
         return $this->entity->where('course_id', $courseId)->get();

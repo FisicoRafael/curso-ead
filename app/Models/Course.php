@@ -12,7 +12,12 @@ class Course extends Model
 
     public $incrementing = false;
     protected $keyType = 'uuid';
-
-
     protected $fillable = ['nome', 'descricao', 'imagem'];
+
+    public function modules()
+    {
+        return $this->hasMany(Modulo::class);
+    }
+
+
 }

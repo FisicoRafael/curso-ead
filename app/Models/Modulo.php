@@ -12,7 +12,10 @@ class Modulo extends Model
 
     public $incrementing = false;
     protected $keyType = 'uuid';
-
-
     protected $fillable = ['nome'];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('modulos', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nome');
-            $table->foreignId('course_id')->constrained('courses');
+            $table->uuid('course_id')->nullable(false);
             $table->timestamps();
         });
     }
